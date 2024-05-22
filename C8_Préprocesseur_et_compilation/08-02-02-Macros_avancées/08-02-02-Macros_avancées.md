@@ -5,7 +5,7 @@
 ### Décodage d'une macro
 
 Expliquez ce que fait la macro ci-dessous :
-
+```
 #define DEFINE_TAB(name, type)                                                 \
                                                                                \
         struct name##_item {                                                   \
@@ -18,6 +18,7 @@ Expliquez ce que fait la macro ci-dessous :
         static inline type get_##name##_val(int pos) {                         \
                 return tab_##name[pos].val;                                    \
         }
+```
 
 <details>
 <summary>Solution</summary>
