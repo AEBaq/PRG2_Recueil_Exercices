@@ -27,7 +27,7 @@ importing Odermatt,skis,567.50,20,11350.00
 ~~~cpp
 #include <stdio.h>
 
-#define MAXLEN 256
+#define MAX_LEN 256
 
 int main(int argc, char **argv) {
 
@@ -44,7 +44,7 @@ int main(int argc, char **argv) {
 
     // start reading
 
-    char brand[MAXLEN]; char item[MAXLEN];
+    char brand[MAX_LEN]; char item[MAX_LEN];
     float unit, total;
     int qty;
 
@@ -65,8 +65,8 @@ Le contenu est chargé en mémoire dans un tableau de structures _stockItem_ dé
 
 ~~~cpp
 struct stockItem {
-    char brand[MAXLEN];
-    char item[MAXLEN];
+    char brand[MAX_LEN];
+    char item[MAX_LEN];
     int qty;
     float unit, total;
 };
@@ -80,12 +80,12 @@ Le fichier binaire produit contient tous les enregistrements présents en mémoi
 ~~~cpp
 #include <stdio.h>
 
-#define MAXLEN 256
+#define MAX_LEN 256
 #define MAXSTOCK 80
 
 struct stockItem {
-    char brand[MAXLEN];
-    char item[MAXLEN];
+    char brand[MAX_LEN];
+    char item[MAX_LEN];
     int qty;
     float unit, total;
 };
@@ -162,12 +162,12 @@ NB: Le fichier binaire est chargé en mémoire dans un tableau de structures _st
 ~~~cpp
 #include <stdio.h>
 
-#define MAXLEN 256
+#define MAX_LEN 256
 #define MAXSTOCK 80
 
 struct stockItem {
-    char brand[MAXLEN];
-    char item[MAXLEN];
+    char brand[MAX_LEN];
+    char item[MAX_LEN];
     int qty;
     float unit, total;
 };
