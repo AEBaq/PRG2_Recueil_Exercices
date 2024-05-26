@@ -63,3 +63,52 @@ int main(int argc, char *argv[]) {
 
    return EXIT_SUCCESS;
 }
+
+/*
+#include <stdio.h>
+#include <time.h>
+
+typedef union {
+    float temperature;
+    float humidity;
+    int occupation;
+} CaptorData;
+
+typedef enum {TEMPERATURE, HUMIDITY, OCCUPATION} CaptorType;
+
+typedef struct {
+    CaptorType type;
+    CaptorData data;
+    time_t timestamp;
+} Captor;
+
+void info(Captor* captor){
+    printf("Timestamp: %ld\n", captor->timestamp);
+    switch(captor->type){
+        case TEMPERATURE :
+            printf("Temperature : %f\n", captor->data.temperature);
+            break;
+        case HUMIDITY :
+            printf("Humidity : %f\n", captor->data.humidity);
+            break;
+        case OCCUPATION :
+            printf("Occupation : %d\n", captor->data.occupation);
+            break;
+        default:
+            printf("Honestly, i don't know how you got here...\n");
+            break;
+    }
+    printf("\n");
+}
+
+
+int main()
+{
+    Captor captor = {TEMPERATURE, 12.5, time(NULL)};
+
+    info(&captor);
+
+
+    return 0;
+}
+ */

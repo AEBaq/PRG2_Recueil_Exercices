@@ -35,3 +35,30 @@ int main(int argc, char *argv[]) {
 
    return EXIT_SUCCESS;
 }
+
+/*
+#include <stdio.h>
+#include <stdbool.h>
+#include <string.h>
+
+#define LIST_SIZE 4
+
+bool isPresent(const char* const world, const char* const motif){
+    return strstr(world, motif) != NULL;
+}
+
+int main()
+{
+    const char motif[] = "subcmd";
+
+    const char* list[LIST_SIZE] = {"commande1 subcmd", "autre commande", "encore subcmd ici", "dernière chaîne"};
+
+    printf("Le motif, %s, a été trouvé dans les string suivante: \n", motif);
+    for(int i = 0; i < LIST_SIZE; i++) {
+        if (isPresent(list[i], motif)) printf("- %s\n", list[i]);
+    }
+
+    return 0;
+}
+
+ */

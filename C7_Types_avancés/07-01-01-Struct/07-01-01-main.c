@@ -63,3 +63,63 @@ int main(int argc, char *argv[]) {
 
    return 0;
 }
+
+/* 2e fois
+#include <stdio.h>
+#include <string.h>
+
+#define MAX_LEN 80
+#define MAX_BOOK 10
+
+typedef struct {
+   char title[MAX_LEN];
+   char autor[MAX_LEN];
+   int year;
+   int nb_copie;
+} Book;
+
+Book newBook(char* title, char* autor, int year, int nb_copie) {
+   Book new;
+   strcpy(new.title, title);
+   strcpy(new.autor, autor);
+   new.year = year;
+   new.nb_copie = nb_copie;
+   return new;
+}
+
+typedef enum {RETURNED, BORROWED} State;
+
+void updateCollection(Book* book, State state, int quantity) {
+   if(state == RETURNED) {
+      book->nb_copie += quantity;
+   } else if (state == BORROWED) {
+      book->nb_copie -= quantity;
+   } else {
+      printf("The number of book could not have been updated due to an incorrect State.\n");
+   }
+}
+
+void bookInfo(const Book* book) {
+   printf("Title: %s\nAutor: %s\nYear: %d\nNumber of copies in reserve: %d\n\n", book->title, book->autor, book->year, book->nb_copie);
+}
+
+
+int main()
+{
+   Book collection[MAX_BOOK];
+
+   char title[MAX_LEN] = "L'histoire de ma vie";
+   char autor[MAX_LEN] = "Emily Baquerizo";
+   int year = 2024;
+   int nb_copie = 42;
+
+   collection[0] = newBook(title, autor, year, nb_copie);
+   bookInfo(&collection[0]);
+
+   updateCollection(&collection[0], BORROWED, 10);
+
+   bookInfo(&collection[0]);
+
+   return 0;
+}
+*/

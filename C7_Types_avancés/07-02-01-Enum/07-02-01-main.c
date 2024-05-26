@@ -53,3 +53,48 @@ int main(int argc, char *argv[]) {
 
    return EXIT_SUCCESS;
 }
+
+/* 2e fois
+#include <stdio.h>
+
+typedef enum {ONLINE, OFFLINE, IN_GAME, IN_PAUSE} PlayerState;
+
+void updateState(PlayerState* old, PlayerState new){
+    *old = new;
+}
+
+void info(PlayerState state){
+    printf("The player is currently ");
+    switch(state) {
+        case ONLINE:
+        printf("ONLINE\n");
+        break;
+        case OFFLINE:
+        printf("OFFLINE\n");
+        break;
+        case IN_GAME:
+        printf("in game\n");
+        break;
+        case IN_PAUSE:
+        printf("in pause\n");
+        break;
+        default:
+        printf("in the matrix... F\n");
+        break;
+    printf("\n");
+    }
+}
+
+int main()
+{
+    PlayerState player1 = ONLINE;
+
+    info(player1);
+
+    updateState(&player1, OFFLINE);
+
+    info(player1);
+
+    return 0;
+}
+ */

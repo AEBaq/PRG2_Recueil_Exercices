@@ -54,3 +54,46 @@ int main(int argc, char *argv[]) {
    free(capteur);
    return EXIT_SUCCESS;
 }
+
+/*
+#include <stdio.h>
+#include <stdint.h>
+#include <stdlib.h>
+#include <time.h>
+
+typedef struct {
+    uint16_t id;
+    time_t timestamp;
+    char type;
+    int32_t value;
+} Captor;
+
+void info(Captor* captor) {
+    printf("Id : %u\nTimestamp: %ld\nType: %d\nValue: %d\n\n", captor->id, captor->timestamp, captor->type, captor->value);
+}
+
+int main()
+{
+    Captor* captor = (Captor *) malloc(sizeof(Captor));
+    if(!captor){
+        printf("Error during the allocation\n");
+        return EXIT_FAILURE;
+    }
+
+    uint16_t id = 12345;
+    time_t timestamp = 161803398;
+    char type = 2;
+    int32_t value = 3.14159;
+
+    captor->id = id;
+    captor->timestamp = timestamp;
+    captor->type = type;
+    captor->value = value;
+
+    info(captor);
+
+    free(captor);
+
+    return EXIT_SUCCESS;
+}
+ */
