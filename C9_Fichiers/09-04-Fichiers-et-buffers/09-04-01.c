@@ -20,7 +20,6 @@ Version:                1.0
 #include <stdlib.h>
 
 int main(int argc, char *argv[]) {
-
    if (argc != 3) {
       printf("Usage: bufferedPrint <buffer size = nb chars> <nb flushes = 0 (never), 1 (at end) or more (always)>\n");
       return EXIT_FAILURE;
