@@ -30,3 +30,5 @@ add_executable(11-02 C11_Structures_de_donnees/11-02-Queue/11-02.c
         C11_Structures_de_donnees/11-02-Queue/queue.h)
 
 add_executable(12-01 C12_Aspects_avancés_C/12-01/12-01.c)
+add_executable(12-02 C12_Aspects_avancés_C/12-02/12-02.c)
+add_executable(12-03 C12_Aspects_avancés_C/12-03/12-03.c)
